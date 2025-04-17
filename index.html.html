@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <div class="converter-container">
+        <div class="converter-card">
+            <h1>Currency Converter</h1>
+            
+            <div class="input-group">
+                <label for="fromCurrency">From Currency:</label>
+                <select id="fromCurrency"></select>
+            </div>
+
+            <div class="input-group">
+                <label for="toCurrency">To Currency:</label>
+                <select id="toCurrency"></select>
+            </div>
+
+            <div class="input-group">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" placeholder="Enter amount" />
+            </div>
+
+            <button id="convertBtn">Convert</button>
+
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <!-- زر أسعار العملات الحية -->
+    <div class="live-prices-container">
+        <button id="showPricesBtn">📊 أسعار العملات الآن</button>
+        <div id="livePricesSection" class="live-prices hidden">
+            <ul id="pricesList"></ul>
+        </div>
+    </div>
+
+    <!-- تغيير السمة (أصبح أسفل زر Show Live Prices) -->
+    <div class="theme-switcher">
+        <label for="themeSelect">Choose Theme:</label>
+        <select id="themeSelect">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </div>
+
+    <div class="contact-container">
+        <button id="contactBtn">Contact</button>
+        <div id="contactNumber" class="hidden">0500553213</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

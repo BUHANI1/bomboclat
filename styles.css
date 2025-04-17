@@ -1,0 +1,220 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* الوضع الفاتح */
+body.light-mode {
+  background-color: #f7f8fa;
+  color: #333;
+}
+
+/* الوضع الداكن */
+body.dark-mode {
+  background-color: #1c1c1e;
+  color: #fff;
+}
+
+.converter-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.converter-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* الوضع الداكن */
+body.dark-mode .converter-card {
+  background-color: #2e2e2e;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+select, input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* الأزرار */
+button {
+  padding: 12px;
+  background-color: #2d89ef;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #256fd1;
+}
+
+/* الرسالة المترجمة */
+#result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2d89ef;
+}
+
+/* زر الاتصال */
+.contact-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#contactBtn {
+  padding: 8px 14px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contactBtn:hover {
+  background-color: #218838;
+}
+
+#contactNumber {
+  margin-top: 10px;
+  font-weight: bold;
+  background: #f8f8f8;
+  padding: 8px 12px;
+  border-radius: 4px;
+  opacity: 1;
+  max-height: 100px;
+  overflow: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease, padding 0.4s ease;
+}
+
+body.dark-mode #contactNumber {
+  color: #fff;
+  background-color: #333;
+}
+
+#contactNumber.hidden {
+  opacity: 0;
+  max-height: 0;
+  padding: 0 12px;
+}
+
+/* الشريط الجانبي الخاص بأسعار العملات */
+.live-prices-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#showPricesBtn {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#showPricesBtn:hover {
+  background-color: #444444;
+}
+
+.live-prices {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .live-prices {
+  background-color: #2e2e2e;
+  color: white;
+}
+
+.live-prices ul {
+  list-style: none;
+  padding: 0;
+}
+
+.live-prices li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+body.dark-mode .live-prices li {
+  border-bottom: 1px solid #444;
+}
+
+.live-prices.hidden {
+  display: none;
+}
+
+/* تأثير التلاشي */
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* تغيير السمة */
+.theme-switcher {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #2d89ef;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.theme-switcher select {
+  padding: 8px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+body.dark-mode .theme-switcher {
+  background-color: #444444;
+}
